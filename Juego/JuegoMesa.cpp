@@ -1370,7 +1370,8 @@ namespace juego {
         //
         tablero ()->asignaSonidoEstablece (carpeta_sonidos_juego + "Metal Click.wav", 100);
         tablero ()->asignaSonidoDesplaza  (carpeta_sonidos_juego + "SnowWalk.ogg",    100);
-        musica  ()->asignaMusica          (carpeta_sonidos_juego + "Track_1.ogg",     100);
+        //musica  ()->asignaMusica          (carpeta_sonidos_juego + "Track_1.ogg",     100);
+        musica  ()->asignaMusica          (carpeta_sonidos_juego + "Musica_Menu_Principal.ogg",     100);
         //
         agregaNombreAlumno (L"Juan Manuel Carrillo");
         agregaNombreAlumno (L"Francisco Manuel Medina García");
