@@ -529,7 +529,6 @@ namespace juego {
         
         *******************************************************************************************/
         tablero ()->situaMuros (grafico_muros_ciudad);
-        //tablero()->situaMuros(grafico_muros_ciudad);
 
         /*******************************************************************************************
         /******************************************************************************************/
@@ -760,6 +759,7 @@ namespace juego {
 
         *******************************************************************************************/
         //
+
         ataqueEspadaNormal   = new Habilidad {
                 L"Ataque cuerpo a cuerpo normal", 
                 EnfoqueHabilidad::personaje, AccesoHabilidad::directo,   Antagonista::oponente};
@@ -889,6 +889,27 @@ namespace juego {
         danoFisico           = new TipoDano    {L"Daño físico"};
         danoMagico           = new TipoDano    {L"Daño mágico"};
         //
+        
+        ataqueMele  = new TipoAtaque  {L"Ataque Melé"};
+        ataqueDisparo  = new TipoAtaque  {L"Ataque de Disparo"};
+		ataqueArtilleria = new TipoAtaque  {L"Ataque de Artilleria"};
+		ataquePulso  = new TipoAtaque {L"Ataque de Pulso"};
+		ataqueHackeo  = new TipoAtaque {L"Ataque de Hackeo"};
+
+        defensaMele  = new TipoDefensa  {L"Defensa Melé"};
+        defensaDisparo  = new TipoDefensa  {L"Defensa de Disparo"};
+        defensaArtilleria = new TipoDefensa  {L"Defensa de Artilleria"};
+        defensaPulso  = new TipoDefensa {L"Defensa de Pulso"};
+        defensaHackeo  = new TipoDefensa {L"DefensaHackeo"};
+
+        //danoFisico = new TipoDano {L"Daño Físico"};
+        danoCinetico = new TipoDano {L"Daño Cinético"};
+        danoExplosivo = new TipoDano {L"Daño Explosivo"};
+        danoEnergetico = new TipoDano {L"Daño Energético"};
+        danoElectrico = new TipoDano {L"Daño Eléctrico"};
+
+  
+
         agregaAtaque  (ataqueCuerpoACuerpo );
         agregaAtaque  (ataqueADistancia);
         agregaAtaque  (ataqueMagico);

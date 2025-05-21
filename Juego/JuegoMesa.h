@@ -120,6 +120,24 @@ namespace juego {
         TipoDefensa * defensaMagica {};
         TipoDano *    danoFisico {};
         TipoDano *    danoMagico {};
+
+        TipoAtaque * ataqueMele{};
+        TipoAtaque * ataqueDisparo{};
+        TipoAtaque * ataqueArtilleria{};
+        TipoAtaque * ataquePulso{};
+        TipoAtaque* ataqueHackeo{};
+
+        TipoDefensa * defensaMele{};
+        TipoDefensa * defensaDisparo{};
+        TipoDefensa * defensaArtilleria{};
+        TipoDefensa * defensaPulso{};
+        TipoDefensa * defensaHackeo{};
+
+        //TipoDano* danoFisico{};
+        TipoDano* danoCinetico{};
+        TipoDano* danoExplosivo{};
+        TipoDano* danoEnergetico{};
+        TipoDano* danoElectrico{};
         /*******************************************************************************************
         /******************************************************************************************/
 
