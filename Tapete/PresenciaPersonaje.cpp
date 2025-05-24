@@ -23,6 +23,9 @@ namespace tapete {
         //
         textura_retrato = new unir2d::Textura ();
         textura_retrato->carga (actor_personaje->archivo_retrato);
+        if (actor_personaje->flipped){
+			textura_retrato->flipH();
+        }
         //
         preparaPanel   (actor_personaje->lado_tablero, actor_personaje->indice_en_equipo);
         preparaTitulo  (actor_personaje->juego_->personajes (), actor_personaje);
@@ -232,6 +235,9 @@ namespace tapete {
     void PresenciaPersonaje::preparaFicha () {
         textura_ficha = new unir2d::Textura {};
         textura_ficha->carga (actor_personaje->archivoFicha ());
+        if (actor_personaje->flipped) {
+            textura_ficha->flipH();
+        }
         imagen_ficha = new unir2d::Imagen {};
         imagen_ficha->asigna (textura_ficha);
         //
@@ -259,6 +265,11 @@ namespace tapete {
 
     unir2d::Imagen * PresenciaPersonaje::imagenRetrato () const {
         return imagen_retrato_actuante;
+    }
+
+    unir2d::Imagen* PresenciaPersonaje::imagenFicha() const
+    {
+        return imagen_ficha;
     }
 
 

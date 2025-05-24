@@ -598,8 +598,11 @@ namespace juego {
         *******************************************************************************************/
         
         Brute57 = new ActorPersonaje{ this, LadoTablero::Izquierda, 0, L"Brute57" };
+		Brute57->flipped = true; // Volteamos el retrato para que se vea bien en el tablero
         Glory_F1st = new ActorPersonaje{ this, LadoTablero::Izquierda, 1, L"Glory_F1st" };
+		Glory_F1st->flipped = true; // Volteamos el retrato para que se vea bien en el tablero
         MPSYKO = new ActorPersonaje{ this, LadoTablero::Izquierda, 2, L"M-PSY-KO" };
+		MPSYKO->flipped = true; // Volteamos el retrato para que se vea bien en el tablero  
         MASA01 = new ActorPersonaje{ this, LadoTablero::Derecha, 0, L"MASA-01" };
         NeoNet = new ActorPersonaje{ this, LadoTablero::Derecha, 1, L"NeoNet" };
         Titan800 = new ActorPersonaje{ this, LadoTablero::Derecha, 2, L"TITAN-800" };
@@ -1392,7 +1395,7 @@ namespace juego {
         tablero ()->asignaSonidoEstablece (carpeta_sonidos_juego + "Metal Click.wav", 100);
         tablero ()->asignaSonidoDesplaza  (carpeta_sonidos_juego + "SnowWalk.ogg",    100);
         //musica  ()->asignaMusica          (carpeta_sonidos_juego + "Track_1.ogg",     100);
-        musica  ()->asignaMusica          (carpeta_sonidos_juego + "Musica_Menu_Principal.ogg",     100);
+        musica  ()->asignaMusica          (carpeta_sonidos_juego + "Musica_Battala_01-002.wav",     100);
         //
         agregaNombreAlumno (L"Juan Manuel Carrillo");
         agregaNombreAlumno (L"Francisco Manuel Medina García");

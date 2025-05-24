@@ -27,12 +27,15 @@ namespace tapete {
                 LadoTablero     lado_tablero, 
                 int             indice_en_equipo,
                 const wstring & nombre           );
+        
         ~ActorPersonaje ();
 
         JuegoMesaBase * juego (); 
         LadoTablero ladoTablero () const;
         int indiceEnEquipo () const;
         const wstring & nombre () const;
+        
+        bool flipped = false;
 
         const string & archivoRetrato () const;
         void ponArchivoRetrato (const string & valor);
