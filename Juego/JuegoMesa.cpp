@@ -1,4 +1,4 @@
-﻿// proyecto: Grupal/Juego
+// proyecto: Grupal/Juego
 // arhivo:   JuegoMesa.cpp
 // versión:  1.1  (9-Ene-2023)
 
@@ -36,7 +36,7 @@ namespace juego {
 
 
     const std::wstring JuegoMesa::tituloVentana () const {
-        return L"UNIR-2D :: Juego de Mesa";
+        return L"UNIR-2D :: X-Korodan";
     }
 
 
@@ -896,14 +896,14 @@ namespace juego {
         ataqueMele  = new TipoAtaque  {L"Ataque Melé"};
         ataqueDisparo  = new TipoAtaque  {L"Ataque de Disparo"};
 		ataqueArtilleria = new TipoAtaque  {L"Ataque de Artilleria"};
-		ataquePulso  = new TipoAtaque {L"Ataque de Pulso"};
+		ataquePulso = new TipoAtaque {L"Ataque de Pulso"};
 		ataqueHackeo  = new TipoAtaque {L"Ataque de Hackeo"};
 
         defensaMele  = new TipoDefensa  {L"Defensa Melé"};
         defensaDisparo  = new TipoDefensa  {L"Defensa de Disparo"};
         defensaArtilleria = new TipoDefensa  {L"Defensa de Artilleria"};
         defensaPulso  = new TipoDefensa {L"Defensa de Pulso"};
-        defensaHackeo  = new TipoDefensa {L"DefensaHackeo"};
+        defensaHackeo  = new TipoDefensa {L"Defensa Hackeo"};
 
         //danoFisico = new TipoDano {L"Daño Físico"};
         danoCinetico = new TipoDano {L"Daño Cinético"};
