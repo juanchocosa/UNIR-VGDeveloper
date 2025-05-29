@@ -69,8 +69,33 @@ namespace juego {
         la lista de habilidades diseñadas para el juego.
 
         *******************************************************************************************/
-        Habilidad * golpeMele{};
-       
+        // Habilidad de ataque genérica para todos los personajes
+        Habilidad* golpeMele{};
+        Habilidad* piezasRepuesto{};
+		//Red squad
+        //**********************
+        //Brute-57
+		Habilidad* salvaMisiles{}; // Ataque a distancia con misiles de tipo danoExplosivo
+        Habilidad* tipoDuro{}; // Sube defensas
+		//Glory-F1st
+		Habilidad* punoHidraulico{}; // Ataque cc con tipo de daño cinético
+		Habilidad* ataquesDevastadores{}; // Sube ataque melé
+		//MPSYKO
+		Habilidad* canonIones{}; // Ataque a distancia con tipo de daño eléctrico
+		Habilidad* reparar{}; // Repara vitalidad
+
+        //Blue division
+        //**********************
+		//Masa-01
+		Habilidad* canon20mm{}; // Ataque a distancia con tipo de daño cinético
+		//Habilidad* rajar{}; // Ataque cc con tipo de daño energético
+		//NeoNet
+		Habilidad* laserPesado{}; // Ataque a distancia con tipo de daño energético
+		//Habilidad* depurarSistema{}; // Sube defensa de hackeo y repara vitalidad
+		//Titan-800
+		Habilidad* canonPlasma{}; // Ataque a distancia con tipo de daño energético
+		//Habilidad* aleacionSobrenatural{}; // Sube defensas ,menos hackeo
+
         /*******************************************************************************************
         /******************************************************************************************/
 

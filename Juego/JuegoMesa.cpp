@@ -724,6 +724,97 @@ namespace juego {
             carpeta_habilids_juego + "Hab_1 Blue Squad.png", carpeta_habilids_juego + "fondo_5.png");
         golpeMele->ponArchivoSonido(carpeta_sonidos_juego + "Magic Missiles.wav");
         agregaHabilidad(golpeMele);
+
+        salvaMisiles = new Habilidad{
+             L"Ataque a distancia de área explosiva",
+                EnfoqueHabilidad::area, AccesoHabilidad::directo,   Antagonista::oponente };
+        salvaMisiles->ponDescripcion(
+            L"Disparo a distancia con misiles explosivos");
+        salvaMisiles->ponArchivosImagenes(
+            carpeta_habilids_juego + "salvaMisiles.png", carpeta_habilids_juego + "fondo_5.png");
+        salvaMisiles->ponArchivoSonido(carpeta_sonidos_juego + "Magic Missiles.wav");
+        agregaHabilidad(salvaMisiles);
+
+        tipoDuro = new Habilidad{
+             L"Sube defensas",
+                EnfoqueHabilidad::si_mismo,  AccesoHabilidad::ninguno,   Antagonista::si_mismo };
+        tipoDuro->ponDescripcion(
+            L"Aguanta todo tipo de ataques");
+        tipoDuro->ponArchivosImagenes(
+            carpeta_habilids_juego + "Hab_7 Blue Squad.png", carpeta_habilids_juego + "fondo_5.png");
+        tipoDuro->ponArchivoSonido(carpeta_sonidos_juego + "Magic Missiles.wav");
+        agregaHabilidad(tipoDuro);
+
+        punoHidraulico = new Habilidad{
+            L"Ataque cuerpo a cuerpo cinético",
+            EnfoqueHabilidad::personaje, AccesoHabilidad::directo, Antagonista::oponente };
+        punoHidraulico->ponDescripcion(
+            L"El personaje golpea cuerpo a cuerpo con daño cinético en vez de físico");
+        punoHidraulico->ponArchivosImagenes(
+            carpeta_habilids_juego + "Hab Red Squad (4).png", carpeta_habilids_juego + "fondo_5.png");
+        punoHidraulico->ponArchivoSonido(carpeta_sonidos_juego + "Magic Missiles.wav");
+        agregaHabilidad(punoHidraulico);
+
+        canonIones = new Habilidad{
+             L"Ataque a distancia de daño eléctrico",
+                EnfoqueHabilidad::personaje, AccesoHabilidad::directo,   Antagonista::oponente };
+        canonIones->ponDescripcion(
+            L"Disparo a distancia con daño eléctrico");
+        canonIones->ponArchivosImagenes(
+            carpeta_habilids_juego + "Hab Red Squad (3).png", carpeta_habilids_juego + "fondo_5.png");
+        canonIones->ponArchivoSonido(carpeta_sonidos_juego + "Magic Missiles.wav");
+        agregaHabilidad(canonIones);
+
+        canon20mm = new Habilidad{
+             L"Ataque a distancia de daño cinético",
+                EnfoqueHabilidad::personaje, AccesoHabilidad::directo,   Antagonista::oponente };
+        canon20mm->ponDescripcion(
+            L"Disparo a distancia con daño cinético");
+        canon20mm->ponArchivosImagenes(
+            carpeta_habilids_juego + "misc_canon_riel.png", carpeta_habilids_juego + "fondo_5.png");
+        canon20mm->ponArchivoSonido(carpeta_sonidos_juego + "Magic Missiles.wav");
+        agregaHabilidad(canon20mm);
+
+        laserPesado = new Habilidad{
+             L"Ataque a distancia de daño energético",
+                EnfoqueHabilidad::personaje, AccesoHabilidad::directo,   Antagonista::oponente };
+        laserPesado->ponDescripcion(
+            L"Disparo a distancia con daño energético");
+        laserPesado->ponArchivosImagenes(
+            carpeta_habilids_juego + "Hab Red Squad (5).png", carpeta_habilids_juego + "fondo_5.png");
+        laserPesado->ponArchivoSonido(carpeta_sonidos_juego + "Magic Missiles.wav");
+        agregaHabilidad(laserPesado);
+
+        canonPlasma = new Habilidad{
+             L"Ataque de área de daño energético",
+                EnfoqueHabilidad::area, AccesoHabilidad::directo,   Antagonista::oponente };
+        canonPlasma->ponDescripcion(
+            L"Disparo a distancia con daño energético de área");
+        canonPlasma->ponArchivosImagenes(
+            carpeta_habilids_juego + "Hab Red Squad (5).png", carpeta_habilids_juego + "fondo_5.png");
+        canonPlasma->ponArchivoSonido(carpeta_sonidos_juego + "Magic Missiles.wav");
+        agregaHabilidad(canonPlasma);
+
+        reparar = new Habilidad{
+             L"Repara vitalidad",
+                EnfoqueHabilidad::personaje, AccesoHabilidad::directo,   Antagonista::aliado };
+        reparar->ponDescripcion(
+            L"Repara vitalidad");
+        reparar->ponArchivosImagenes(
+            carpeta_habilids_juego + "Hab_3 Blue Squad.png", carpeta_habilids_juego + "fondo_5.png");
+        reparar->ponArchivoSonido(carpeta_sonidos_juego + "Magic Missiles.wav");
+        agregaHabilidad(reparar);
+
+        piezasRepuesto = new Habilidad{
+             L"Piezas respuesto",
+                EnfoqueHabilidad::personaje, AccesoHabilidad::directo,   Antagonista::aliado };
+        piezasRepuesto->ponDescripcion(
+            L"Recupera la vitalidad propia");
+        piezasRepuesto->ponArchivosImagenes(
+            carpeta_habilids_juego + "misc_piezas_repuesto.png", carpeta_habilids_juego + "fondo_5.png");
+        piezasRepuesto->ponArchivoSonido(carpeta_sonidos_juego + "Magic Missiles.wav");
+        agregaHabilidad(piezasRepuesto);
+
         /*
         ataqueEspadaNormal   = new Habilidad {
                 L"Ataque cuerpo a cuerpo normal", 
@@ -927,11 +1018,28 @@ namespace juego {
         *******************************************************************************************/
         //
 		Brute57->agregaHabilidad(golpeMele);
+        Brute57->agregaHabilidad(salvaMisiles);
+        Brute57->agregaHabilidad(tipoDuro);
+
 		Glory_F1st->agregaHabilidad(golpeMele);
+		Glory_F1st->agregaHabilidad(punoHidraulico);
+		Glory_F1st->agregaHabilidad(piezasRepuesto);
+
 		MPSYKO->agregaHabilidad(golpeMele);
+		MPSYKO->agregaHabilidad(canonIones);
+		MPSYKO->agregaHabilidad(reparar);
+
 		MASA01->agregaHabilidad(golpeMele);
+		MASA01->agregaHabilidad(canon20mm);
+		MASA01->agregaHabilidad(piezasRepuesto);
+
 		NeoNet->agregaHabilidad(golpeMele);
+		NeoNet->agregaHabilidad(laserPesado);
+		NeoNet->agregaHabilidad(reparar);
+
 		Titan800->agregaHabilidad(golpeMele);
+		Titan800->agregaHabilidad(canonPlasma);
+		Titan800->agregaHabilidad(piezasRepuesto);
 
         /*
         Brute57->agregaHabilidad (ataqueEspadaNormal);
@@ -1063,6 +1171,56 @@ namespace juego {
         golpeMele->asignaDefensa(defensaMele);
         golpeMele->asignaDano(danoFisico, 30);
 
+        salvaMisiles->ponCoste(9);
+        salvaMisiles->ponAlcance(10);
+        salvaMisiles->ponRadioAlcance(3);
+        salvaMisiles->asignaAtaque(ataqueArtilleria);
+        salvaMisiles->asignaDefensa(defensaArtilleria);
+        salvaMisiles->asignaDano(danoExplosivo, 50);
+
+        tipoDuro->ponCoste(4);
+		tipoDuro->agregaEfectoDefensa(defensaMele, 30);
+        tipoDuro->agregaEfectoDefensa(defensaDisparo, 30);
+
+        punoHidraulico->ponCoste(5);
+        punoHidraulico->ponAlcance(1);
+        punoHidraulico->asignaAtaque(ataqueMele);
+        punoHidraulico->asignaDefensa(defensaMele);
+        punoHidraulico->asignaDano(danoCinetico, 60);
+
+		canonIones->ponCoste(6);
+        canonIones->ponAlcance(15);
+        canonIones->asignaAtaque(ataqueHackeo);
+        canonIones->asignaDefensa(defensaHackeo);
+        canonIones->asignaDano(danoElectrico, 25);
+
+		canon20mm->ponCoste(5);
+        canon20mm->ponAlcance(12);
+        canon20mm->asignaAtaque(ataqueDisparo);
+        canon20mm->asignaDefensa(defensaDisparo);
+        canon20mm->asignaDano(danoCinetico, 20);
+
+        laserPesado->ponCoste(10);
+        laserPesado->ponAlcance(18);
+        laserPesado->asignaAtaque(ataqueDisparo);
+        laserPesado->asignaDefensa(defensaDisparo);
+        laserPesado->asignaDano(danoEnergetico, 50);
+
+        canonPlasma->ponCoste(8);
+        canonPlasma->ponAlcance(12);
+        canonPlasma->ponRadioAlcance(2);
+        canonPlasma->asignaAtaque(ataqueDisparo);
+        canonPlasma->asignaDefensa(defensaDisparo);
+        canonPlasma->asignaDano(danoEnergetico, 40);
+
+        reparar->ponCoste(10);
+        reparar->ponAlcance(3);
+        reparar->asignaCuracion(30);
+
+        piezasRepuesto->ponCoste(20);
+        piezasRepuesto->ponAlcance(1);
+        piezasRepuesto->asignaCuracion(40);
+        
         /*
         ataqueEspadaNormal->ponCoste (3);                                       
         ataqueEspadaNormal->ponAlcance (1);
@@ -1455,6 +1613,16 @@ namespace juego {
         Titan800 = nullptr;
         //Habilidades
 		golpeMele = nullptr;
+		salvaMisiles = nullptr;
+		tipoDuro = nullptr;
+		punoHidraulico = nullptr;
+		canonIones = nullptr;
+		canon20mm = nullptr;
+		laserPesado = nullptr;
+		canonPlasma = nullptr;
+		reparar = nullptr;
+		piezasRepuesto = nullptr;
+
     
         //Estadisticas
 		ataqueMele = nullptr;
