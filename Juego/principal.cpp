@@ -24,7 +24,7 @@ int main () {
         std::cerr << "********************************************************************************" << std::endl;
         std::cerr << "********************************************************************************" << std::endl;
         std::cerr << std::endl;
-        std::cerr << "UNIR-2D :: Juego de Mesa" << std::endl;
+        std::cerr << "UNIR-2D :: X-KORODAN" << std::endl;
         std::cerr << "------------------------" << std::endl;
         std::cerr << std::endl;
         std::cerr << excepcion.what () << std::endl;

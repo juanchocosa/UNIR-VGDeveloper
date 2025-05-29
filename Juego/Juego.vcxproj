@@ -114,6 +114,7 @@
       <LanguageStandard>stdcpp20</LanguageStandard>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>juego.h</PrecompiledHeaderFile>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -166,9 +167,9 @@
     <ClInclude Include="JuegoMesa.h" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="activos\escudo_devils.png" />
-    <Image Include="activos\escudo_tusk.png" />
-    <Image Include="activos\estampas_fondo.png" />
+    <Image Include="activos\bd.png" />
+    <Image Include="activos\rs.png" />
+    <Image Include="activos\tile.png" />
     <Image Include="habilidades\arco_flecha.png" />
     <Image Include="habilidades\bola_fuego.png" />
     <Image Include="habilidades\cristales.png" />
@@ -178,16 +179,18 @@
     <Image Include="habilidades\fondo_5.png" />
     <Image Include="habilidades\vela.png" />
     <Image Include="habilidades\vela_triple.png" />
-    <Image Include="retratos\aristocrat_75.png" />
-    <Image Include="retratos\ficha_azul.png" />
-    <Image Include="retratos\ficha_roja.png" />
-    <Image Include="retratos\harja_75.png" />
-    <Image Include="retratos\Hunter_75.png" />
-    <Image Include="retratos\male1_75.png" />
-    <Image Include="retratos\miner1_75.png" />
-    <Image Include="retratos\patrek_75.png" />
-    <Image Include="retratos\pirate1_75.png" />
-    <Image Include="retratos\thief2_75.png" />
+    <Image Include="retratos\Brute57.png" />
+    <Image Include="retratos\Brute57_ficha.png" />
+    <Image Include="retratos\Glory_F1st.png" />
+    <Image Include="retratos\Glory_F1st_ficha.png" />
+    <Image Include="retratos\M-PSY-KO.png" />
+    <Image Include="retratos\M-PSY-KO_ficha.png" />
+    <Image Include="retratos\MASA-01.png" />
+    <Image Include="retratos\MASA-01_ficha.png" />
+    <Image Include="retratos\NeoNet.png" />
+    <Image Include="retratos\NeoNet_ficha.png" />
+    <Image Include="retratos\TITAN-800.png" />
+    <Image Include="retratos\TITAN-800_ficha.png" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="JuegoMesa.txt" />

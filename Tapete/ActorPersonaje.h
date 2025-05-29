@@ -83,7 +83,7 @@ namespace tapete {
         // Estadísticas de los personajes
         //------------------------------------------------------------------------------------------
 
-        static constexpr int maximaVitalidad = 100;
+        static constexpr int maximaVitalidad = 150;
         int vitalidad () const;
         void ponVitalidad (int valor);
 

@@ -73,49 +73,55 @@
     <Image Include="habilidades\vela_triple.png">
       <Filter>Archivos de recursos\habilidades</Filter>
     </Image>
-    <Image Include="retratos\aristocrat_75.png">
-      <Filter>Archivos de recursos\retratos</Filter>
-    </Image>
-    <Image Include="retratos\harja_75.png">
-      <Filter>Archivos de recursos\retratos</Filter>
-    </Image>
-    <Image Include="retratos\Hunter_75.png">
-      <Filter>Archivos de recursos\retratos</Filter>
-    </Image>
-    <Image Include="retratos\male1_75.png">
-      <Filter>Archivos de recursos\retratos</Filter>
-    </Image>
-    <Image Include="retratos\miner1_75.png">
-      <Filter>Archivos de recursos\retratos</Filter>
-    </Image>
-    <Image Include="retratos\patrek_75.png">
-      <Filter>Archivos de recursos\retratos</Filter>
-    </Image>
-    <Image Include="retratos\pirate1_75.png">
-      <Filter>Archivos de recursos\retratos</Filter>
-    </Image>
-    <Image Include="retratos\thief2_75.png">
-      <Filter>Archivos de recursos\retratos</Filter>
-    </Image>
-    <Image Include="activos\escudo_devils.png">
+    <Image Include="activos\bd.png">
       <Filter>Archivos de recursos\activos</Filter>
     </Image>
-    <Image Include="activos\escudo_tusk.png">
+    <Image Include="activos\rs.png">
       <Filter>Archivos de recursos\activos</Filter>
     </Image>
-    <Image Include="activos\estampas_fondo.png">
+    <Image Include="activos\tile.png">
       <Filter>Archivos de recursos\activos</Filter>
     </Image>
-    <Image Include="retratos\ficha_azul.png">
+    <Image Include="retratos\Brute57.png">
       <Filter>Archivos de recursos\retratos</Filter>
     </Image>
-    <Image Include="retratos\ficha_roja.png">
+    <Image Include="retratos\Brute57_ficha.png">
+      <Filter>Archivos de recursos\retratos</Filter>
+    </Image>
+    <Image Include="retratos\Glory_F1st.png">
+      <Filter>Archivos de recursos\retratos</Filter>
+    </Image>
+    <Image Include="retratos\Glory_F1st_ficha.png">
+      <Filter>Archivos de recursos\retratos</Filter>
+    </Image>
+    <Image Include="retratos\MASA-01.png">
+      <Filter>Archivos de recursos\retratos</Filter>
+    </Image>
+    <Image Include="retratos\MASA-01_ficha.png">
+      <Filter>Archivos de recursos\retratos</Filter>
+    </Image>
+    <Image Include="retratos\M-PSY-KO.png">
+      <Filter>Archivos de recursos\retratos</Filter>
+    </Image>
+    <Image Include="retratos\M-PSY-KO_ficha.png">
+      <Filter>Archivos de recursos\retratos</Filter>
+    </Image>
+    <Image Include="retratos\NeoNet.png">
+      <Filter>Archivos de recursos\retratos</Filter>
+    </Image>
+    <Image Include="retratos\NeoNet_ficha.png">
+      <Filter>Archivos de recursos\retratos</Filter>
+    </Image>
+    <Image Include="retratos\TITAN-800.png">
+      <Filter>Archivos de recursos\retratos</Filter>
+    </Image>
+    <Image Include="retratos\TITAN-800_ficha.png">
       <Filter>Archivos de recursos\retratos</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
     <Text Include="JuegoMesa.txt">
-      <Filter>Archivos de recursos</Filter>
+      <Filter>Archivos de recursos\retratos</Filter>
     </Text>
   </ItemGroup>
 </Project>

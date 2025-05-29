@@ -635,54 +635,7 @@ namespace juego {
 		agregaPersonaje(MASA01);
 		agregaPersonaje(NeoNet);
 		agregaPersonaje(Titan800);
-        /*
-        //
-        Miner  = new ActorPersonaje {this, LadoTablero::Izquierda, 0, L"Miner"};
-        Male   = new ActorPersonaje {this, LadoTablero::Izquierda, 1, L"Male"};
-        Patrek = new ActorPersonaje {this, LadoTablero::Izquierda, 2, L"Patrek"};
-        Pirate = new ActorPersonaje {this, LadoTablero::Izquierda, 3, L"Pirate"};
-        Aristo = new ActorPersonaje {this, LadoTablero::Derecha,   0, L"Aristo"};
-        Harja  = new ActorPersonaje {this, LadoTablero::Derecha,   1, L"Harja"};
-        Hunter = new ActorPersonaje {this, LadoTablero::Derecha,   2, L"Hunter"};
-        Thief  = new ActorPersonaje {this, LadoTablero::Derecha,   3, L"Thief"};
-        //
-        Miner ->ponArchivoRetrato (carpeta_retratos_juego + "miner1_75.png");
-        Male  ->ponArchivoRetrato (carpeta_retratos_juego + "male1_75.png");
-        Patrek->ponArchivoRetrato (carpeta_retratos_juego + "patrek_75.png");
-        Pirate->ponArchivoRetrato (carpeta_retratos_juego + "pirate1_75.png");
-        Aristo->ponArchivoRetrato (carpeta_retratos_juego + "aristocrat_75.png");
-        Harja ->ponArchivoRetrato (carpeta_retratos_juego + "harja_75.png");
-        Hunter->ponArchivoRetrato (carpeta_retratos_juego + "Hunter_75.png");
-        Thief ->ponArchivoRetrato (carpeta_retratos_juego + "thief2_75.png");
-        //
-        Miner ->ponArchivoFicha (carpeta_retratos_juego + "ficha_roja.png");
-        Male  ->ponArchivoFicha (carpeta_retratos_juego + "ficha_roja.png");
-        Patrek->ponArchivoFicha (carpeta_retratos_juego + "ficha_roja.png");
-        Pirate->ponArchivoFicha (carpeta_retratos_juego + "ficha_roja.png");
-        Aristo->ponArchivoFicha (carpeta_retratos_juego + "ficha_azul.png");
-        Harja ->ponArchivoFicha (carpeta_retratos_juego + "ficha_azul.png");
-        Hunter->ponArchivoFicha (carpeta_retratos_juego + "ficha_azul.png");
-        Thief ->ponArchivoFicha (carpeta_retratos_juego + "ficha_azul.png");
-        //
-        Miner ->ponIniciativa (20);
-        Male  ->ponIniciativa (19);
-        Patrek->ponIniciativa (18);
-        Pirate->ponIniciativa (17);
-        Aristo->ponIniciativa (20);
-        Harja ->ponIniciativa (19);
-        Hunter->ponIniciativa (18);
-        Thief ->ponIniciativa (17);
-        //
-        agregaPersonaje (Miner);
-        agregaPersonaje (Male);
-        agregaPersonaje (Patrek);
-        agregaPersonaje (Pirate);
-        agregaPersonaje (Aristo);
-        agregaPersonaje (Harja);
-        agregaPersonaje (Hunter);
-        agregaPersonaje (Thief);
-        //
-        */
+        
         /*******************************************************************************************
         /******************************************************************************************/
     }
@@ -762,7 +715,16 @@ namespace juego {
 
         *******************************************************************************************/
         //
-
+		golpeMele = new Habilidad{
+			L"Ataque cuerpo a cuerpo normal",
+			EnfoqueHabilidad::personaje, AccesoHabilidad::directo, Antagonista::oponente};
+        golpeMele->ponDescripcion(
+            L"El personaje golpea a un enemigo que se encuentra en una casilla próxima.");
+        golpeMele->ponArchivosImagenes(
+            carpeta_habilids_juego + "Hab_1 Blue Squad.png", carpeta_habilids_juego + "fondo_5.png");
+        golpeMele->ponArchivoSonido(carpeta_sonidos_juego + "Magic Missiles.wav");
+        agregaHabilidad(golpeMele);
+        /*
         ataqueEspadaNormal   = new Habilidad {
                 L"Ataque cuerpo a cuerpo normal", 
                 EnfoqueHabilidad::personaje, AccesoHabilidad::directo,   Antagonista::oponente};
@@ -788,6 +750,7 @@ namespace juego {
                 L"Bola de fuego",                 
                 EnfoqueHabilidad::area,      AccesoHabilidad::directo,   Antagonista::oponente};
         //
+      
         ataqueEspadaNormal  ->ponDescripcion (
                 L"El personaje usa su espada para atacar a un enemigo que se encuentra en una casilla próxima.");
         ataqueArco          ->ponDescripcion (
@@ -839,6 +802,7 @@ namespace juego {
         agregaHabilidad (curacionGrupo );
         agregaHabilidad (proyectilMagico );
         agregaHabilidad (bolaFuego );
+        */
         //
         /*******************************************************************************************
         /******************************************************************************************/
@@ -883,15 +847,6 @@ namespace juego {
 
         *******************************************************************************************/
         //
-        ataqueCuerpoACuerpo  = new TipoAtaque  {L"Ataque cuerpo a cuerpo"};
-        ataqueADistancia     = new TipoAtaque  {L"Ataque a distancia"};
-        ataqueMagico         = new TipoAtaque  {L"Ataque mágico"};
-        defensaCuerpoACuerpo = new TipoDefensa {L"Defensa cuerpo a cuerpo"};
-        defensaADistancia    = new TipoDefensa {L"Defensa a distancia"};
-        defensaMagica        = new TipoDefensa {L"Defensa mágica"};
-        danoFisico           = new TipoDano    {L"Daño físico"};
-        danoMagico           = new TipoDano    {L"Daño mágico"};
-        //
         
         ataqueMele  = new TipoAtaque  {L"Ataque Melé"};
         ataqueDisparo  = new TipoAtaque  {L"Ataque de Disparo"};
@@ -905,14 +860,29 @@ namespace juego {
         defensaPulso  = new TipoDefensa {L"Defensa de Pulso"};
         defensaHackeo  = new TipoDefensa {L"Defensa Hackeo"};
 
-        //danoFisico = new TipoDano {L"Daño Físico"};
+        danoFisico = new TipoDano {L"Daño Físico"};
         danoCinetico = new TipoDano {L"Daño Cinético"};
         danoExplosivo = new TipoDano {L"Daño Explosivo"};
         danoEnergetico = new TipoDano {L"Daño Energético"};
         danoElectrico = new TipoDano {L"Daño Eléctrico"};
 
-  
+		agregaAtaque(ataqueMele);
+		agregaAtaque(ataqueDisparo);
+		agregaAtaque(ataqueArtilleria);
+		agregaAtaque(ataquePulso);
+		agregaAtaque(ataqueHackeo);
+		agregaDefensa(defensaMele);
+		agregaDefensa(defensaDisparo);
+		agregaDefensa(defensaArtilleria);
+		agregaDefensa(defensaPulso);
+		agregaDefensa(defensaHackeo);
+		agregaDano(danoFisico);
+		agregaDano(danoCinetico);
+		agregaDano(danoExplosivo);
+		agregaDano(danoEnergetico);
+		agregaDano(danoElectrico);
 
+        /*
         agregaAtaque  (ataqueCuerpoACuerpo );
         agregaAtaque  (ataqueADistancia);
         agregaAtaque  (ataqueMagico);
@@ -921,6 +891,8 @@ namespace juego {
         agregaDefensa (defensaMagica );
         agregaDano    (danoFisico);
         agregaDano    (danoMagico);
+        */
+        
         //
         /*******************************************************************************************
         /******************************************************************************************/
@@ -954,9 +926,15 @@ namespace juego {
         Titan800
         *******************************************************************************************/
         //
-       
+		Brute57->agregaHabilidad(golpeMele);
+		Glory_F1st->agregaHabilidad(golpeMele);
+		MPSYKO->agregaHabilidad(golpeMele);
+		MASA01->agregaHabilidad(golpeMele);
+		NeoNet->agregaHabilidad(golpeMele);
+		Titan800->agregaHabilidad(golpeMele);
 
-        Brute57 ->agregaHabilidad (ataqueEspadaNormal);
+        /*
+        Brute57->agregaHabilidad (ataqueEspadaNormal);
         Brute57->agregaHabilidad (ataqueArco);
         Brute57->agregaHabilidad (ataqueEspadaPoderoso);
         Brute57->agregaHabilidad (defensaFerrea);
@@ -992,6 +970,7 @@ namespace juego {
         //Thief ->agregaHabilidad (ataqueArco);
         //Thief ->agregaHabilidad (ataqueEspadaPoderoso);
         //
+        */
         /*******************************************************************************************
         /******************************************************************************************/
     }
@@ -1078,6 +1057,13 @@ namespace juego {
 
         *******************************************************************************************/
         //
+        golpeMele->ponCoste(3);
+        golpeMele->ponAlcance(1);
+        golpeMele->asignaAtaque(ataqueMele);
+        golpeMele->asignaDefensa(defensaMele);
+        golpeMele->asignaDano(danoFisico, 30);
+
+        /*
         ataqueEspadaNormal->ponCoste (3);                                       
         ataqueEspadaNormal->ponAlcance (1);
         ataqueEspadaNormal->asignaAtaque  (ataqueCuerpoACuerpo); 
@@ -1122,6 +1108,7 @@ namespace juego {
         bolaFuego->asignaDefensa (defensaMagica);
         bolaFuego->asignaDano    (danoMagico, 50);
         //
+        */
         /*******************************************************************************************
         /******************************************************************************************/
     }
@@ -1176,74 +1163,115 @@ namespace juego {
 
         *******************************************************************************************/
         //
-        Brute57->agregaAtaque     (ataqueCuerpoACuerpo,  70);
-        Brute57->agregaAtaque     (ataqueADistancia,     50);
-        Brute57->agregaDefensa    (defensaCuerpoACuerpo, 70);
-        Brute57->agregaDefensa    (defensaADistancia,    70);
-        Brute57->agregaDefensa    (defensaMagica,        20);
-        Brute57->agregaReduceDano (danoFisico,           10);
-        Brute57->agregaReduceDano (danoMagico,            5);
-        //
-        Glory_F1st->agregaAtaque     (ataqueCuerpoACuerpo,  50);
-      //Male  ->agregaAtaque     (ataqueADistancia,     50);  No se usa
-        Glory_F1st->agregaAtaque     (ataqueMagico,         50);
-        Glory_F1st->agregaDefensa    (defensaCuerpoACuerpo, 50);
-        Glory_F1st->agregaDefensa    (defensaADistancia,    50);
-        Glory_F1st->agregaDefensa    (defensaMagica,        50);
-        Glory_F1st->agregaReduceDano (danoFisico,            5);
-        Glory_F1st->agregaReduceDano (danoMagico,           10);
-        //                       
-        MPSYKO->agregaAtaque     (ataqueCuerpoACuerpo,  50);
-      //Patrek->agregaAtaque     (ataqueADistancia,     50);  No se usa
-        MPSYKO->agregaAtaque     (ataqueMagico,         70);
-        MPSYKO->agregaDefensa    (defensaCuerpoACuerpo, 40);
-        MPSYKO->agregaDefensa    (defensaADistancia,    40);
-        MPSYKO->agregaDefensa    (defensaMagica,        30);
-        MPSYKO->agregaReduceDano (danoFisico,            0);
-        MPSYKO->agregaReduceDano (danoMagico,           15);
-        /*                       
-        Pirate->agregaAtaque     (ataqueCuerpoACuerpo,  60);
-        Pirate->agregaAtaque     (ataqueADistancia,     70);        
-        Pirate->agregaDefensa    (defensaCuerpoACuerpo, 50);
-        Pirate->agregaDefensa    (defensaADistancia,    50);
-        Pirate->agregaDefensa    (defensaMagica,        50);
-        Pirate->agregaReduceDano (danoFisico,            7);
-        Pirate->agregaReduceDano (danoMagico,            7);
-        */                       
-        MASA01->agregaAtaque     (ataqueCuerpoACuerpo,  70);
-        MASA01->agregaAtaque     (ataqueADistancia,     50);
-        MASA01->agregaDefensa    (defensaCuerpoACuerpo, 70);
-        MASA01->agregaDefensa    (defensaADistancia,    70);
-        MASA01->agregaDefensa    (defensaMagica,        20);
-        MASA01->agregaReduceDano (danoFisico,           10);
-        MASA01->agregaReduceDano (danoMagico,            5);
-        //                       
-        NeoNet->agregaAtaque     (ataqueCuerpoACuerpo,  50);
-      //Harja ->agregaAtaque     (ataqueADistancia,     50);  No se usa
-        NeoNet->agregaAtaque     (ataqueMagico,         50);
-        NeoNet->agregaDefensa    (defensaCuerpoACuerpo, 50);
-        NeoNet->agregaDefensa    (defensaADistancia,    50);
-        NeoNet->agregaDefensa    (defensaMagica,        50);
-        NeoNet->agregaReduceDano (danoFisico,            5);
-        NeoNet->agregaReduceDano (danoMagico,           10);
-        //                       
-        Titan800->agregaAtaque     (ataqueCuerpoACuerpo,  50);
-      //Hunter->agregaAtaque     (ataqueADistancia,     50);  No se usa
-        Titan800->agregaAtaque     (ataqueMagico,         70);
-        Titan800->agregaDefensa    (defensaCuerpoACuerpo, 40);
-        Titan800->agregaDefensa    (defensaADistancia,    40);
-        Titan800->agregaDefensa    (defensaMagica,        30);
-        Titan800->agregaReduceDano (danoFisico,            0);
-        Titan800->agregaReduceDano (danoMagico,           15);
-        /*
-        Thief ->agregaAtaque     (ataqueCuerpoACuerpo,  60);
-        Thief ->agregaAtaque     (ataqueADistancia,     70);        
-        Thief ->agregaDefensa    (defensaCuerpoACuerpo, 50);
-        Thief ->agregaDefensa    (defensaADistancia,    50);
-        Thief ->agregaDefensa    (defensaMagica,        50);
-        Thief ->agregaReduceDano (danoFisico,            7);
-        Thief ->agregaReduceDano (danoMagico,            7);
-        */
+        Brute57->agregaAtaque(ataqueMele,               70);
+        Brute57->agregaAtaque(ataqueDisparo,            50);
+		Brute57->agregaAtaque(ataqueArtilleria,         50);
+		Brute57->agregaAtaque(ataquePulso,              50);
+		Brute57->agregaAtaque(ataqueHackeo,             20);
+		Brute57->agregaDefensa(defensaMele,             70);
+		Brute57->agregaDefensa(defensaDisparo,          70);
+		Brute57->agregaDefensa(defensaArtilleria,       70);
+		Brute57->agregaDefensa(defensaPulso,            70);
+		Brute57->agregaDefensa(defensaHackeo,           20);
+        
+        Brute57->agregaReduceDano(danoFisico,            5);
+		Brute57->agregaReduceDano(danoCinetico,         10);
+		Brute57->agregaReduceDano(danoExplosivo,         5);
+		Brute57->agregaReduceDano(danoEnergetico,       10);
+		Brute57->agregaReduceDano(danoElectrico,         5);
+        
+
+        Glory_F1st->agregaAtaque(ataqueMele,            70);
+        Glory_F1st->agregaAtaque(ataqueDisparo,         50);
+        Glory_F1st->agregaAtaque(ataqueArtilleria,      50);
+        Glory_F1st->agregaAtaque(ataquePulso,           50);
+        Glory_F1st->agregaAtaque(ataqueHackeo,          20);
+        Glory_F1st->agregaDefensa(defensaMele,          70);
+        Glory_F1st->agregaDefensa(defensaDisparo,       70);
+        Glory_F1st->agregaDefensa(defensaArtilleria,    70);
+        Glory_F1st->agregaDefensa(defensaPulso,         70);
+        Glory_F1st->agregaDefensa(defensaHackeo,        20);
+        
+        Glory_F1st->agregaReduceDano(danoFisico, 5);
+        Glory_F1st->agregaReduceDano(danoCinetico,      10);
+        Glory_F1st->agregaReduceDano(danoExplosivo,      5);
+        Glory_F1st->agregaReduceDano(danoEnergetico,    10);
+        Glory_F1st->agregaReduceDano(danoElectrico,      5);
+       
+
+        MPSYKO->agregaAtaque(ataqueMele,                70);
+        MPSYKO->agregaAtaque(ataqueDisparo,             50);
+        MPSYKO->agregaAtaque(ataqueArtilleria,          50);
+        MPSYKO->agregaAtaque(ataquePulso,               50);
+        MPSYKO->agregaAtaque(ataqueHackeo,              20);
+        MPSYKO->agregaDefensa(defensaMele,              70);
+        MPSYKO->agregaDefensa(defensaDisparo,           70);
+        MPSYKO->agregaDefensa(defensaArtilleria,        70);
+        MPSYKO->agregaDefensa(defensaPulso,             70);
+        MPSYKO->agregaDefensa(defensaHackeo,            20);
+        
+        MPSYKO->agregaReduceDano(danoFisico,            5);
+        MPSYKO->agregaReduceDano(danoCinetico,          10);
+        MPSYKO->agregaReduceDano(danoExplosivo,         5);
+        MPSYKO->agregaReduceDano(danoEnergetico,        10);
+        MPSYKO->agregaReduceDano(danoElectrico,         5);
+        
+
+        MASA01->agregaAtaque(ataqueMele,                70);
+        MASA01->agregaAtaque(ataqueDisparo,             50);
+        MASA01->agregaAtaque(ataqueArtilleria,          50);
+        MASA01->agregaAtaque(ataquePulso,               50);
+        MASA01->agregaAtaque(ataqueHackeo,              20);
+        MASA01->agregaDefensa(defensaMele,              70);
+        MASA01->agregaDefensa(defensaDisparo,           70);
+        MASA01->agregaDefensa(defensaArtilleria,        70);
+        MASA01->agregaDefensa(defensaPulso,             70);
+        MASA01->agregaDefensa(defensaHackeo,            20);
+        
+        MASA01->agregaReduceDano(danoFisico,            5);
+        MASA01->agregaReduceDano(danoCinetico,          10);
+        MASA01->agregaReduceDano(danoExplosivo,         5);
+        MASA01->agregaReduceDano(danoEnergetico,        10);
+        MASA01->agregaReduceDano(danoElectrico,         5);
+        
+
+        
+		NeoNet->agregaAtaque(ataqueMele,                70);
+		NeoNet->agregaAtaque(ataqueDisparo,             50);
+		NeoNet->agregaAtaque(ataqueArtilleria,          50);
+		NeoNet->agregaAtaque(ataquePulso,               50);
+		NeoNet->agregaAtaque(ataqueHackeo,              20);
+		NeoNet->agregaDefensa(defensaMele,              70);
+		NeoNet->agregaDefensa(defensaDisparo,           70);
+		NeoNet->agregaDefensa(defensaArtilleria,        70);
+		NeoNet->agregaDefensa(defensaPulso,             70);
+		NeoNet->agregaDefensa(defensaHackeo,            20);
+        
+        NeoNet->agregaReduceDano(danoFisico,            5);
+		NeoNet->agregaReduceDano(danoCinetico,          10);
+		NeoNet->agregaReduceDano(danoExplosivo,         5);
+		NeoNet->agregaReduceDano(danoEnergetico,        10);
+		NeoNet->agregaReduceDano(danoElectrico,         5);
+        
+
+		Titan800->agregaAtaque(ataqueMele,              70);
+		Titan800->agregaAtaque(ataqueDisparo,           50);
+		Titan800->agregaAtaque(ataqueArtilleria,        50);
+		Titan800->agregaAtaque(ataquePulso,             50);
+		Titan800->agregaAtaque(ataqueHackeo,            20);
+		Titan800->agregaDefensa(defensaMele,            70);
+		Titan800->agregaDefensa(defensaDisparo,         70);
+		Titan800->agregaDefensa(defensaArtilleria,      70);
+		Titan800->agregaDefensa(defensaPulso,           70);
+		Titan800->agregaDefensa(defensaHackeo,          20);
+        
+		Titan800->agregaReduceDano(danoFisico,          5);
+		Titan800->agregaReduceDano(danoCinetico,        10);
+		Titan800->agregaReduceDano(danoExplosivo,       5);
+		Titan800->agregaReduceDano(danoEnergetico,      10);
+		Titan800->agregaReduceDano(danoElectrico,       5);
+        
+
         /*******************************************************************************************
         /******************************************************************************************/
     }
@@ -1418,33 +1446,33 @@ namespace juego {
             
             
             
-            
+        // Personajes    
         Brute57 = nullptr;
         Glory_F1st = nullptr;
         MPSYKO = nullptr;
         MASA01 = nullptr;
         NeoNet = nullptr;
         Titan800 = nullptr;
-        //Patrek   = nullptr;
-        //Pirate   = nullptr;
-        //
-        ataqueEspadaNormal   = nullptr;
-        ataqueArco           = nullptr;
-        ataqueEspadaPoderoso = nullptr;
-        defensaFerrea        = nullptr;
-        curacionSimple       = nullptr;
-        curacionGrupo        = nullptr;
-        proyectilMagico      = nullptr;
-        bolaFuego            = nullptr;
-        //
-        ataqueCuerpoACuerpo  = nullptr;
-        ataqueADistancia     = nullptr;
-        ataqueMagico         = nullptr;
-        defensaCuerpoACuerpo = nullptr;
-        defensaADistancia    = nullptr;
-        defensaMagica        = nullptr;
-        danoFisico           = nullptr;
-        danoMagico           = nullptr;
+        //Habilidades
+		golpeMele = nullptr;
+    
+        //Estadisticas
+		ataqueMele = nullptr;
+		ataqueDisparo = nullptr;
+		ataqueArtilleria = nullptr;
+		ataquePulso = nullptr;
+		ataqueHackeo = nullptr;
+		defensaMele = nullptr;
+		defensaDisparo = nullptr;
+		defensaArtilleria = nullptr;
+		defensaPulso = nullptr;
+		defensaHackeo = nullptr;
+        danoFisico = nullptr;
+		danoCinetico = nullptr;
+		danoExplosivo = nullptr;
+		danoEnergetico = nullptr;
+		danoElectrico = nullptr;
+
     }
 
 

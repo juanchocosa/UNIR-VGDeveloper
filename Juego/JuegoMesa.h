@@ -43,15 +43,7 @@ namespace juego {
         ActorPersonaje* MASA01{};
         ActorPersonaje* NeoNet{};
 		ActorPersonaje* Titan800{};
-
-        ActorPersonaje * Aristo {};
-        ActorPersonaje * Harja {};
-        ActorPersonaje * Hunter {};
-        ActorPersonaje * Thief {};
-        ActorPersonaje * Miner {};
-        ActorPersonaje * Male {};
-        ActorPersonaje * Patrek {};
-        ActorPersonaje * Pirate {};
+  
         /*******************************************************************************************
         /******************************************************************************************/
  
@@ -77,14 +69,8 @@ namespace juego {
         la lista de habilidades diseñadas para el juego.
 
         *******************************************************************************************/
-        Habilidad * ataqueEspadaNormal {}; 
-        Habilidad * ataqueArco {};
-        Habilidad * ataqueEspadaPoderoso {};
-        Habilidad * defensaFerrea {};
-        Habilidad * curacionSimple {};
-        Habilidad * curacionGrupo {};
-        Habilidad * proyectilMagico {};
-        Habilidad * bolaFuego {};
+        Habilidad * golpeMele{};
+       
         /*******************************************************************************************
         /******************************************************************************************/
 
@@ -112,20 +98,12 @@ namespace juego {
         la lista de tipos de ataque, defensa y daño diseñados para el juego.
 
         *******************************************************************************************/
-        TipoAtaque *  ataqueCuerpoACuerpo {};
-        TipoAtaque *  ataqueADistancia {};
-        TipoAtaque *  ataqueMagico {};
-        TipoDefensa * defensaCuerpoACuerpo {};
-        TipoDefensa * defensaADistancia {};
-        TipoDefensa * defensaMagica {};
-        TipoDano *    danoFisico {};
-        TipoDano *    danoMagico {};
 
         TipoAtaque * ataqueMele{};
         TipoAtaque * ataqueDisparo{};
         TipoAtaque * ataqueArtilleria{};
         TipoAtaque * ataquePulso{};
-        TipoAtaque* ataqueHackeo{};
+        TipoAtaque * ataqueHackeo{};
 
         TipoDefensa * defensaMele{};
         TipoDefensa * defensaDisparo{};
@@ -133,7 +111,7 @@ namespace juego {
         TipoDefensa * defensaPulso{};
         TipoDefensa * defensaHackeo{};
 
-        //TipoDano* danoFisico{};
+        TipoDano* danoFisico{};
         TipoDano* danoCinetico{};
         TipoDano* danoExplosivo{};
         TipoDano* danoEnergetico{};
