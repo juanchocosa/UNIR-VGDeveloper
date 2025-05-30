@@ -294,6 +294,9 @@ namespace tapete {
         }
     }
 
+    /*
+		Establece la malla de muros del tablero, con los puntos de las rejilla y los índices de estampas
+    */
 
     void PresenciaTablero::estableceMallaMuros (
                     const PuntosHexagonos & puntos_rejilla,

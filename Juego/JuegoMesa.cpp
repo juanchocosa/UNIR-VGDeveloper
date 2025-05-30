@@ -1578,7 +1578,8 @@ namespace juego {
         Titan800->ponSitioFicha (Coord {29, 35});
         //Thief ->ponSitioFicha (Coord {35, 35});
         //
-        tablero ()->asignaSonidoEstablece (carpeta_sonidos_juego + "Metal Click.wav", 100);
+        //tablero()->asignaSonidoEstablece(carpeta_sonidos_juego + "Metal Click.wav", 100);
+        tablero ()->asignaSonidoEstablece (carpeta_sonidos_juego + "MechaClick.wav", 40);
         //tablero ()->asignaSonidoDesplaza  (carpeta_sonidos_juego + "SnowWalk.ogg",    100);
         tablero()->asignaSonidoDesplaza(carpeta_sonidos_juego + "FootSteps.ogg", 100);
         //musica  ()->asignaMusica          (carpeta_sonidos_juego + "Track_1.ogg",     100);
