@@ -722,7 +722,7 @@ namespace juego {
             L"El personaje golpea a un enemigo que se encuentra en una casilla próxima.");
         golpeMele->ponArchivosImagenes(
             carpeta_habilids_juego + "Hab_1 Blue Squad.png", carpeta_habilids_juego + "fondo_5.png");
-        golpeMele->ponArchivoSonido(carpeta_sonidos_juego + "Magic Missiles.wav");
+        golpeMele->ponArchivoSonido(carpeta_sonidos_juego + "Mecha Missiles.ogg");
         agregaHabilidad(golpeMele);
 
         salvaMisiles = new Habilidad{
@@ -732,7 +732,7 @@ namespace juego {
             L"Disparo a distancia con misiles explosivos");
         salvaMisiles->ponArchivosImagenes(
             carpeta_habilids_juego + "salvaMisiles.png", carpeta_habilids_juego + "fondo_5.png");
-        salvaMisiles->ponArchivoSonido(carpeta_sonidos_juego + "Magic Missiles.wav");
+        salvaMisiles->ponArchivoSonido(carpeta_sonidos_juego + "Mecha Missiles.ogg");
         agregaHabilidad(salvaMisiles);
 
         tipoDuro = new Habilidad{
@@ -742,7 +742,7 @@ namespace juego {
             L"Aguanta todo tipo de ataques");
         tipoDuro->ponArchivosImagenes(
             carpeta_habilids_juego + "Hab_7 Blue Squad.png", carpeta_habilids_juego + "fondo_5.png");
-        tipoDuro->ponArchivoSonido(carpeta_sonidos_juego + "Magic Missiles.wav");
+        tipoDuro->ponArchivoSonido(carpeta_sonidos_juego + "Mecha Missiles.ogg");
         agregaHabilidad(tipoDuro);
 
         punoHidraulico = new Habilidad{
@@ -752,7 +752,7 @@ namespace juego {
             L"El personaje golpea cuerpo a cuerpo con daño cinético en vez de físico");
         punoHidraulico->ponArchivosImagenes(
             carpeta_habilids_juego + "Hab Red Squad (4).png", carpeta_habilids_juego + "fondo_5.png");
-        punoHidraulico->ponArchivoSonido(carpeta_sonidos_juego + "Magic Missiles.wav");
+        punoHidraulico->ponArchivoSonido(carpeta_sonidos_juego + "Mecha Missiles.ogg");
         agregaHabilidad(punoHidraulico);
 
         canonIones = new Habilidad{
@@ -762,7 +762,7 @@ namespace juego {
             L"Disparo a distancia con daño eléctrico");
         canonIones->ponArchivosImagenes(
             carpeta_habilids_juego + "Hab Red Squad (3).png", carpeta_habilids_juego + "fondo_5.png");
-        canonIones->ponArchivoSonido(carpeta_sonidos_juego + "Magic Missiles.wav");
+        canonIones->ponArchivoSonido(carpeta_sonidos_juego + "Mecha Missiles.ogg");
         agregaHabilidad(canonIones);
 
         canon20mm = new Habilidad{
@@ -772,7 +772,7 @@ namespace juego {
             L"Disparo a distancia con daño cinético");
         canon20mm->ponArchivosImagenes(
             carpeta_habilids_juego + "misc_canon_riel.png", carpeta_habilids_juego + "fondo_5.png");
-        canon20mm->ponArchivoSonido(carpeta_sonidos_juego + "Magic Missiles.wav");
+        canon20mm->ponArchivoSonido(carpeta_sonidos_juego + "Mecha Missiles.ogg");
         agregaHabilidad(canon20mm);
 
         laserPesado = new Habilidad{
@@ -782,7 +782,7 @@ namespace juego {
             L"Disparo a distancia con daño energético");
         laserPesado->ponArchivosImagenes(
             carpeta_habilids_juego + "Hab Red Squad (5).png", carpeta_habilids_juego + "fondo_5.png");
-        laserPesado->ponArchivoSonido(carpeta_sonidos_juego + "Magic Missiles.wav");
+        laserPesado->ponArchivoSonido(carpeta_sonidos_juego + "Mecha Missiles.ogg");
         agregaHabilidad(laserPesado);
 
         canonPlasma = new Habilidad{
@@ -792,7 +792,7 @@ namespace juego {
             L"Disparo a distancia con daño energético de área");
         canonPlasma->ponArchivosImagenes(
             carpeta_habilids_juego + "Hab Red Squad (5).png", carpeta_habilids_juego + "fondo_5.png");
-        canonPlasma->ponArchivoSonido(carpeta_sonidos_juego + "Magic Missiles.wav");
+        canonPlasma->ponArchivoSonido(carpeta_sonidos_juego + "Mecha Missiles.ogg");
         agregaHabilidad(canonPlasma);
 
         reparar = new Habilidad{
@@ -802,7 +802,7 @@ namespace juego {
             L"Repara vitalidad");
         reparar->ponArchivosImagenes(
             carpeta_habilids_juego + "Hab_3 Blue Squad.png", carpeta_habilids_juego + "fondo_5.png");
-        reparar->ponArchivoSonido(carpeta_sonidos_juego + "Magic Missiles.wav");
+        reparar->ponArchivoSonido(carpeta_sonidos_juego + "Mecha Missiles.ogg");
         agregaHabilidad(reparar);
 
         piezasRepuesto = new Habilidad{
@@ -812,7 +812,7 @@ namespace juego {
             L"Recupera la vitalidad propia");
         piezasRepuesto->ponArchivosImagenes(
             carpeta_habilids_juego + "misc_piezas_repuesto.png", carpeta_habilids_juego + "fondo_5.png");
-        piezasRepuesto->ponArchivoSonido(carpeta_sonidos_juego + "Magic Missiles.wav");
+        piezasRepuesto->ponArchivoSonido(carpeta_sonidos_juego + "Mecha Missiles.ogg");
         agregaHabilidad(piezasRepuesto);
 
         /*
@@ -1579,7 +1579,8 @@ namespace juego {
         //Thief ->ponSitioFicha (Coord {35, 35});
         //
         tablero ()->asignaSonidoEstablece (carpeta_sonidos_juego + "Metal Click.wav", 100);
-        tablero ()->asignaSonidoDesplaza  (carpeta_sonidos_juego + "SnowWalk.ogg",    100);
+        //tablero ()->asignaSonidoDesplaza  (carpeta_sonidos_juego + "SnowWalk.ogg",    100);
+        tablero()->asignaSonidoDesplaza(carpeta_sonidos_juego + "FootSteps.ogg", 100);
         //musica  ()->asignaMusica          (carpeta_sonidos_juego + "Track_1.ogg",     100);
         musica  ()->asignaMusica          (carpeta_sonidos_juego + "Musica_Battala_01-002.wav",     100);
         //
